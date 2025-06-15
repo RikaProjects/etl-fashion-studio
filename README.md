@@ -19,16 +19,25 @@ Prosesnya mencakup tiga tahap utama:
 
 ```bash
 etl-fashion-studio/
+etl-fashion-studio/
 │
-├── extract.py         # Modul untuk mengambil data dari website
-├── transform.py       # Modul untuk membersihkan dan memformat data
-├── load.py            # Modul untuk menyimpan data
-├── main.py            # Alur utama ETL
-├── .gitignore         # File untuk mengabaikan file rahasia atau tidak perlu
-├── requirements.txt   # Daftar dependensi Python
-└── tests/             # Folder untuk unit test
+├── utils/
+│ ├── extract.py
+│ ├── transform.py
+│ └── load.py
+│
+├── test_extract.py
+├── test_transform.py
+├── test_load.py
+│
+├── main.py
+├── products.csv
+├── requirements.txt
+├── submission.txt
+├── README.md
+├── .coverage
+└── .gitignore
 ```
-
 ## ⚙️ Teknologi yang Digunakan
 
 - Python
@@ -36,6 +45,26 @@ etl-fashion-studio/
 - pandas (untuk manipulasi data)
 - gspread + Google API (opsional, untuk Google Sheets)
 - PostgreSQL (opsional)
+
+```
+
+## 🔧 Cara Menjalankan
+
+Petunjuk lengkap cara menjalankan proyek ini, termasuk perintah menjalankan skrip ETL dan testing, dapat ditemukan di file:
+
+📄 [`submission.txt`](./submission.txt)
+
+## Hasil Output (Google Sheets)
+
+[🔗 Link Google Sheets hasil ETL](https://docs.google.com/spreadsheets/d/1IEXeOoRdHBoe-YE_stC2hkOJHE2OkOZ50Ps5-eAscC8/edit?usp=sharing)
+
+## Dependensi
+
+Pastikan sudah menginstal dependensi yang dibutuhkan:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## 🧪 Pengujian
 
